@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Current Minute Display</title>
+</head>
+<body>
+  <div id="minute-display"></div>
+  <button onclick="showCurrentMinute()">Get Current Minute</button>
+
+  <script>
+    function showCurrentMinute() {
+      var now = new Date();
+      var minute = now.getMinutes();
+      document.getElementById("minute-display").innerText = "The current minute is: " + minute;
+    }
+  </script>
+</body>
+</html>
