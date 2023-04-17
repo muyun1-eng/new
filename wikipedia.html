@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <title>Wikipedia App</title>
+        <style>
+            body {
+               background-color: #DBF9FC;
+            }
+         </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia App</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script defer src="wiki.js"></script>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <header>
+
+
+            <h1 class="header__title">Wikipedia API</h1>
+
+            <div class="header__search-bar">
+
+                <input type="text" id="input" aria-label="Search anything..." class="search-bar__input" placeholder="Search anything..." autofocus required />
+                
+                <button type="button" id="submit" class="search-bar__button" aria-label="search"> <i class="fa-sharp fa-solid fa-magnifying-glass"></i> </button>
+
+            </div>
+
+        </header>
+
+    </div>
+
+
+    <div class="results">
+        <p id="error" class="results__error"></p>
+        <div id="results" class="results__items"></div>
+    </div>
+
+
+</body>
+
+</html>
