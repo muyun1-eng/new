@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Functions</title>
+  <style>
+    body {
+       background-color: #DBF9FC;
+    }
+ </style>
+</head>
+<body>
+    <div class="container p-5 my-5 bg-primary text-black">
+        <h1>this page is for two js functions</h1> 
+  <div id="output"></div>
+  <button onclick="lastItem(['Watermelon', 'Apple', 'Orange', 'Kiwi'])">Sort Array</button>
+  <button onclick="askAndSort()">put four values and sort</button>
+
+  <script>
+    function lastItem(arr) {
+      var outputDiv = document.getElementById('output');
+      outputDiv.innerHTML = 'Original Array: ' + JSON.stringify(arr);
+      
+      var sortedArr = arr.slice().sort();
+      var lastItem = sortedArr[sortedArr.length - 1];
+      
+      console.log(lastItem);
+      outputDiv.innerHTML += '<br>Last Alphabetical Item: ' + lastItem;
+    }
+    
+    function askAndSort() {
+      var outputDiv = document.getElementById('output');
+      var things = [];
+      
+      for (var i = 0; i < 4; i++) {
+        var input = prompt('Enter a ' + (i+1) + ' thing:');
+        things.push(input);
+      }
+      
+      outputDiv.innerHTML = 'Original Order: ' + JSON.stringify(things) + '<br>';
+      
+      var sortedThings = things.slice().sort();
+      outputDiv.innerHTML += 'Sorted Alphabetically: ' + JSON.stringify(sortedThings);
+    }
+  </script>
+</body>
+</html>
